@@ -19,3 +19,23 @@ for elem_title in elems_title:
     title = elem_title.text
     titles.append(title)
 
+
+#順位を取得
+ranks = []
+
+for i in range(1,len(titles)+1):
+    rank = int(i)
+    ranks.append(rank)
+
+
+#csvで出力
+  #pandasで表を作成
+import pandas as pd
+df = pd.DataFrame()
+
+df['rank']=ranks
+df['title']=titles
+
+  #downloadフォルダに出力
+df.to_csv("~/Downloads/search_SEO_titles.csv",index = False,encoding = "utf_8_sig")
+
