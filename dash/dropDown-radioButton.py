@@ -11,6 +11,9 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 # ドロップダウン：dcc.Dropdown(options=[],value=)　valueは初期値
 # マルチセレクト: Dropdownと同じ。valueがlist形式になる　value=['A','b'] + multi=True
 # ラジオボタン： dcc.Radioitems(options=[], value=) ※複数選択不可
+# チェックボックス（radioの複数）：dcc.Checklist
+# スライダー：dcc.Slider 最小値、最大値、markを打つ場所を指定x:x, 初期値value
+
 
 app.layout = html.Div([
     html.Label('Dropdown'),
@@ -49,7 +52,29 @@ app.layout = html.Div([
         ],
         value = 'yamagata',
     ),
-])
+
+    html.Label('Checkboxes'),
+    dcc.Checklist(
+        options =[
+            {'label':'佐藤','value':'sato'},
+            {'label':'鈴木','value':'suzuki'},
+            {'label':'田中','value':'tanaka'},
+        ],
+        value = ['suzuki','tanaka']
+    ),
+
+    html.Label('text-input'),
+    dcc.Input(value='dcc.Inputでテキストボックスを作成', type='text'),
+
+    html.Label('Slider'),
+    dcc.Slider(
+        min=0,
+        max=5,
+        marks={i:str(i) for i in range(1,6)},
+        value = 2,
+    )
+], style={'columnCount':5},
+)
 
 
 
