@@ -45,7 +45,7 @@ app.layout = html.Div(children=[
         }
     ),
     html.Div(children=[
-        html.Button('confirm',
+        html.Button('5秒以内に選択してください',
             type = 'button',
             id = 'confirm',
             style = {'backgroundColor':'darkgray',
