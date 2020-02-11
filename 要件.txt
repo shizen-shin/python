@@ -1,0 +1,10 @@
+１．日本の株価データを取得
+みん株 時系列
+https://minkabu.jp/stock/100000018/daily_bar
+　
+＜過去分データの取得＞
+・自動更新OFF
+・さらに表示クリックし過去データも表示
+・csvファイルを取得
+　　- japanese-stock-price.csv
+・
