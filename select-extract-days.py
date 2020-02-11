@@ -32,12 +32,12 @@ app.layout = html.Div(children=[
 
     dcc.Dropdown(
         options =[
-            {'label':'20','value':'20'},
-            {'label':'60','value':'60'},
-            {'label':'180','value':'180'},
-            {'label':'400','value':'400'},
-            {'label':'800','value':'800'},
-            {'label':'1200','value':'1200'}
+            {'label':'20(約20日分)','value':'20'},
+            {'label':'60(約2ヶ月分)','value':'60'},
+            {'label':'180(約6ヶ月分)','value':'180'},
+            {'label':'400(約1年分)','value':'400'},
+            {'label':'800(約2年分)','value':'800'},
+            {'label':'1200(約3年分)','value':'1200'}
         ],
         value = '400',
         style = {'maxWidth':'50%',
@@ -45,7 +45,7 @@ app.layout = html.Div(children=[
         }
     ),
     html.Div(children=[
-        html.Button('確定',
+        html.Button('confirm',
             type = 'button',
             id = 'confirm',
             style = {'backgroundColor':'darkgray',
