@@ -26,23 +26,37 @@ app.layout = html.Div(children=[
             'textAlign':'center'
             }
     ),
-    html.Label('取得する過去データの日数',
+    html.Label('取得する過去データ数',
         style = {'textAlign':'center'}
         ),
 
     dcc.Dropdown(
         options =[
-            {'label':'20日分','value':'20'},
-            {'label':'2ヶ月分','value':'60'},
-            {'label':'6ヶ月分','value':'180'},
-            {'label':'1年分','value':'400'},
-            {'label':'2年分','value':'800'},
-            {'label':'3年分','value':'1200'}
+            {'label':'20','value':'20'},
+            {'label':'60','value':'60'},
+            {'label':'180','value':'180'},
+            {'label':'400','value':'400'},
+            {'label':'800','value':'800'},
+            {'label':'1200','value':'1200'}
         ],
         value = '400',
-        style = {'maxWidth':'40%',
+        style = {'maxWidth':'50%',
                 'margin':'0 auto'        
         }
+    ),
+    html.Div(children=[
+        html.Button('確定',
+            type = 'button',
+            id = 'confirm',
+            style = {'backgroundColor':'darkgray',
+                    'color':'white',
+                    'fontSize':'1.0em',
+                    # 'font-weight':'bold',
+                    'borderStyle':'none',
+                    'margin':'30px auto'
+                }            
+        )
+    ],style = {'textAlign':'center'}
     )
 ])
 
