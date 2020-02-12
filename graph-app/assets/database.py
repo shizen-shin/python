@@ -29,7 +29,7 @@ def read_data():  #初期データの読込(csv)
     import pandas as pd
     import datetime
 
-    df = pd.read_csv('assets/test-daily-data.csv')
+    df = pd.read_csv('japanese-stock-price.csv')
 
     for index, _df in df.iterrows():
         date = datetime.datetime.strptime(_df['date'],'%Y/%m/%d').date()
