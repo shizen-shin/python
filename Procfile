@@ -1,1 +1,1 @@
-web: gunicorn select-extract-days:server --log-file -
+web: gunicorn stock-price-app-miyasaka:server --log-file -
