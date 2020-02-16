@@ -2,7 +2,7 @@
 from selenium import webdriver
 browser = webdriver.Chrome('chromedriver.exe')
 
-url = 'https://stock-price-app-miyasaka.herokuapp.com/'
+url = 'https://extract-past-stock-price-data.herokuapp.com/'
 browser.get(url)
 
 #指定された日付を取得（addeventlistnerは組めないっぽい）

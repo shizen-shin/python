@@ -77,7 +77,7 @@ if scraypedDate > latestDate:
 
     #scraypしたデータを一列ずつrowに入れる（dateはdatetime型に変換）
     for date, start, high, low, end, adjusted in zip(dates, starts, highs, lows, ends, adjusteds):
-        date = datetime.strptime(date,'%Y/%m/%d').date()
+        date = datetime.datetime.strptime(date,'%Y/%m/%d').date()
 
         row = Data(date = date, start = start, high = high, low = low, end = end, adjusted= adjusted)
         db_session.add(row)
