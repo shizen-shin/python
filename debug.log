@@ -1,2 +1,5 @@
 [0212/020642.467:ERROR:process_reader_win.cc(123)] NtOpenThread: {アクセス拒否} プロセスはオブジェクトのアクセスを要求しましたが、アクセス権が与えられていません。 (0xc0000022)
 [0212/020642.469:ERROR:exception_snapshot_win.cc(98)] thread ID 22572 not found in process
+[0217/012843.116:ERROR:process_reader_win.cc(151)] SuspendThread: アクセスが拒否されました。 (0x5)
+[0217/012843.119:ERROR:process_reader_win.cc(151)] SuspendThread: アクセスが拒否されました。 (0x5)
+[0217/012843.119:ERROR:exception_snapshot_win.cc(98)] thread ID 3440 not found in process

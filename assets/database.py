@@ -26,14 +26,16 @@ def init_db():    #DBの初期化
 def read_data():
     #csvファイルの内容読込み
     from assets import models
-    import pandas as pd
+    import pandas as pdｘ
     import datetime
 
     df = pd.read_csv('assets/japanese-stock-price.csv')
 
     #for文で各配列を抽出（dateはstr->dateに形式を変換)
     for index, _df in df.iterrows():
-        date = datetime.datetime.strptime(_df['date'],'%Y/%m/%d').date() 
+        date = datetime.datetime.strptime(_df['date'],'%Y/%m/%d').date()
+        data = (_df['start'], _df['high'], _df['low'], _df['end'], _df['adjusted'])
+        data = data.replace('"','')
         row = models.Data(date = date, start = _df['start'], high = _df['high'], low = _df['low'], end = _df['end'], adjusted= _df['adjusted'])
         db_session.add(row)
     db_session.commit()
